@@ -1,6 +1,6 @@
 function computeAverageOfNumbers(nums: number[]): number {
-  // your code here
-  return 0;
+  if (nums.length === 0) return 0;
+  return nums.reduce((sum, n) => sum + n, 0) / nums.length;
 }
 
 export {};

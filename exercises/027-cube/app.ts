@@ -1,6 +1,5 @@
-function cube(n: number): number {
-  // your code here
-  return 0;
+function cube(num: number): number {
+  return num ** 3;
 }
 
 export {};

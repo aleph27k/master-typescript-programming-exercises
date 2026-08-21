@@ -1,6 +1,5 @@
-function joinArrays(arr1: number[], arr2: number[]): number[] {
-  // your code here
-  return [];
+function joinArrays<T>(arr1: T[], arr2: T[]): T[] {
+  return [...arr1, ...arr2];
 }
 
 export {};

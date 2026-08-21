@@ -1,6 +1,5 @@
-function getElementsUpTo(array: number[], n: number): string[] {
-  // your code here
-  return [];
+function getElementsUpTo<T>(arr: T[], n: number): T[] {
+  return arr.slice(0, n);
 }
 
 export {};

@@ -1,5 +1,6 @@
-function addToBack(arr: unknown[], element: number) {
-  // your code here
+function addToBack<T>(arr: T[], element: T): T[] {
+  arr.push(element);
+  return arr;
 }
 
 export {};

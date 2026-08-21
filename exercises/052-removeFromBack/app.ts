@@ -1,6 +1,6 @@
-function removeFromBack(arr: number[]): number[] {
-  // your code here
-  return [];
+function removeFromBack<T>(arr: T[]): T[] {
+  arr.pop();
+  return arr;
 }
 
 export {};

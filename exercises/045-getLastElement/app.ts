@@ -1,5 +1,5 @@
-function getLastElement(array: number[]) {
-  // your code here
+function getLastElement<T>(arr: T[]): T {
+  return arr[arr.length - 1];
 }
 
 export {};

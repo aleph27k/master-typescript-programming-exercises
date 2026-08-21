@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function computeAverageOfNumbers(nums) {
-    // your code here
-    return 0;
+    if (nums.length === 0)
+        return 0;
+    return nums.reduce((sum, n) => sum + n, 0) / nums.length;
 }

@@ -1,5 +1,5 @@
-function getNthElement(array: number[], n: number) {
-  // your code here
+function getNthElement<T>(arr: T[], n: number): T {
+  return arr[n];
 }
 
 export {};

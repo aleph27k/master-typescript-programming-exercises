@@ -1,5 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function getLastElement(array) {
-    // your code here
+function getLastElement(arr) {
+    return arr[arr.length - 1];
 }

@@ -1,5 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function getFirstElement(array) {
-    // your code here
+function getFirstElement(arr) {
+    return arr[0];
 }

@@ -1,6 +1,5 @@
-function square(n: number): number {
-  // your code here
-  return 0;
+function square(num: number): number {
+  return num ** 2;
 }
 
 export {};
