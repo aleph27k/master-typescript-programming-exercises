@@ -1,6 +1,5 @@
-function computeAreaOfATriangle(a: number, b: number): number {
-  // your code here
-  return 0;
+function computeAreaOfATriangle(base: number, height: number): number {
+  return (base * height) / 2;
 }
 
 export {};

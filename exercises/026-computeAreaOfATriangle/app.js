@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function computeAreaOfATriangle(a, b) {
-    // your code here
-    return 0;
+function computeAreaOfATriangle(base, height) {
+    return (base * height) / 2;
 }

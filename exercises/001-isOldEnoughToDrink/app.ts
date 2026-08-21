@@ -1,5 +1,5 @@
 function isOldEnoughToDrink(age: number): boolean {
-  // your code here
+   return age >= 21;
   return false;
 }
 
