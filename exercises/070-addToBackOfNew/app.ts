@@ -1,6 +1,8 @@
-function addToBackOfNew(arr: number[], element: number): number[] {
+function getAllElementsButNth(arr: number[], n: number): number[] {
   // your code here
-  return [];
+  const copy = [...arr];
+  copy.splice(n, 1);
+  return copy;
 }
 
 export {};

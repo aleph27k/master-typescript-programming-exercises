@@ -1,6 +1,6 @@
-function keep(arr: number[], keeper: number): number[] {
+function removeElement<T>(arr: T[], discarder: T): T[] {
   // your code here
-  return [];
+  return arr.filter(item => item !== discarder);
 }
 
 export {};

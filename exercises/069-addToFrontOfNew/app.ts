@@ -1,6 +1,6 @@
-function addToFrontOfNew(arr: number[], element: number): number[] {
+function addToBackOfNew<T>(arr: T[], element: T): T[] {
   // your code here
-  return [];
+  return [...arr, element];
 }
 
 export {};

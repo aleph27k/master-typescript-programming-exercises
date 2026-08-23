@@ -1,6 +1,6 @@
-function joinThreeArrays(arr1: number[], arr2: number[], arr3: number[]): number[] {
+function joinThreeArrays<T>(arr1: T[], arr2: T[], arr3: T[]): T[] {
   // your code here
-  return [];
+  return [...arr1, ...arr2, ...arr3];
 }
 
 export {};

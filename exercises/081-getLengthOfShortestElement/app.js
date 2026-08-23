@@ -2,5 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 function getLengthOfShortestElement(arr) {
     // your code here
-    return 0;
+    if (arr.length === 0)
+        return 0;
+    return arr.reduce((min, word) => Math.min(min, word.length), Infinity);
 }
