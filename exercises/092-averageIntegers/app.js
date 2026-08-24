@@ -2,9 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 function average(arr) {
     // your code here
-    return 0;
+    if (arr.length === 0)
+        return 0;
+    return sum(arr) / arr.length;
 }
 function sum(arr) {
     // your code here
-    return 0;
+    return arr.reduce((total, num) => total + num, 0);
 }
