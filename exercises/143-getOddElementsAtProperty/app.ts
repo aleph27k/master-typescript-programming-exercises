@@ -1,6 +1,9 @@
 function getOddElementsAtProperty(obj: Record<string, unknown>, key: string): unknown[] {
-  // your code here
-  return [];
+  const arr = obj[key];
+  if (!Array.isArray(arr)) {
+    return [];
+  }
+  return arr.filter(element => typeof element === 'number' && element % 2 !== 0);
 }
 
 export {};

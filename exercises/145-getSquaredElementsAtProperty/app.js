@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function getSquaredElementsAtProperty(obj, key) {
-    // your code here
-    return [];
+    const arr = obj[key];
+    if (!Array.isArray(arr)) {
+        return [];
+    }
+    return arr.map(element => (Number(element) || 0) * (Number(element) || 0));
 }

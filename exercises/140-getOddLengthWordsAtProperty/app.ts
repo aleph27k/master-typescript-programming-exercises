@@ -1,6 +1,8 @@
 function getOddLengthWordsAtProperty(obj: Record<string, unknown>, key: string): string[] {
-  // your code here
-  return [];
+  const arr = obj[key];
+  if (!Array.isArray(arr)) {
+    return [];
+  }
+  return arr.filter((element): element is string => typeof element === 'string' && element.length % 2 !== 0);
 }
-
 export {};

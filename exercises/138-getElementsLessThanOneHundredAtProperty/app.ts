@@ -1,6 +1,8 @@
 function getElementsLessThan100AtProperty(obj: Record<string, unknown>, key: string): unknown[] {
-  // your code here
-  return [];
+  const arr = obj[key];
+  if (!Array.isArray(arr)) {
+    return [];
+  }
+  return arr.filter(element => element < 100);
 }
-
 export {};

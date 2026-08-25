@@ -1,6 +1,9 @@
-function getLastElementOfProperty(obj: Record<string, unknown>, key: string) : number | undefined {
-  // your code here
-  return undefined;
+function getElementsThatEqual10AtProperty(obj: Record<string, unknown>, key: string): unknown[] {
+  const arr = obj[key];
+  if (!Array.isArray(arr)) {
+    return [];
+  }
+  return arr.filter(element => element == 10);
 }
 
 export {};
