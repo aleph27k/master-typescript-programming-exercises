@@ -1,26 +1,35 @@
 class PhoneNumberFormatter {
-  numbers: number[];
+  private numbers: number[];
+
   constructor(numbers: number[]) {
     this.numbers = numbers;
   }
-  render() {
-    // your code here
+
+  render(): string {
+    return `${this.parenthesize(this.getAreaCode())} ${this.getExchangeCode()}-${this.getLineNumber()}`;
   }
-  getAreaCode() {
-    // your code here
+
+  private getAreaCode(): string {
+    return this.slice(0, 3);
   }
-  getExchangeCode() {
-    // your code here
+
+  private getExchangeCode(): string {
+    return this.slice(3, 6);
   }
-  getLineNumber() {
-    // your code here
+
+  private getLineNumber(): string {
+    return this.slice(6, 10);
   }
-  parenthesize(string: string) {
-    // your code here
+
+  private parenthesize(str: string): string {
+    return `(${str})`;
   }
-  slice(start: number, end: number) {
-    // your code here
+
+  private slice(start: number, end: number): string {
+    return this.numbers.slice(start, end).join('');
   }
 }
 
-export {};
+// Example usage:
+// const output = new PhoneNumberFormatter([6, 5, 0, 8, 3, 5, 9, 1, 7, 2]).render();
+// console.log(output); // --> "(650) 835-9172"

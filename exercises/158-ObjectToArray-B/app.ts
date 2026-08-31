@@ -1,6 +1,9 @@
 function listAllValues(obj: Record<string, unknown>): unknown[] {
-  // your code here
-  return [];
+  const values: unknown[] = [];
+  for (const key in obj) {
+    values.push(obj[key]);
+  }
+  return values;
 }
 
 export {};

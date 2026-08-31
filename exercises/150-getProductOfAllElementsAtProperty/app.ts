@@ -1,6 +1,9 @@
 function getProductOfAllElementsAtProperty(obj: Record<string, unknown>, key: string): number {
-  // your code here
-  return 0;
+  const arr = obj[key];
+  if (!Array.isArray(arr) || arr.length === 0) {
+    return 0;
+  }
+  return arr.reduce((acc, val) => acc * (Number(val) || 0), 1);
 }
 
 export {};

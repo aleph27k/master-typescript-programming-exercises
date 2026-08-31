@@ -1,9 +1,11 @@
-function getElementsThatEqual10AtProperty(obj: Record<string, unknown>, key: string): unknown[] {
+function getLastElementOfProperty(obj: Record<string, unknown>, key: string): unknown {
   const arr = obj[key];
-  if (!Array.isArray(arr)) {
-    return [];
+
+  if (!Array.isArray(arr) || arr.length === 0) {
+    return undefined;
   }
-  return arr.filter(element => element == 10);
+
+  return arr[arr.length - 1];
 }
 
 export {};

@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function listAllValues(obj) {
-    // your code here
-    return [];
+    const values = [];
+    for (const key in obj) {
+        values.push(obj[key]);
+    }
+    return values;
 }

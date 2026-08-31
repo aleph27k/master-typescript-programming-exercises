@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function comparePassByValueAndReference(input) {
-    // your code here
-    return {};
+    const copy = typeof input === 'object' && input !== null ? { ...input } : input;
+    return { original: input, copy, sameReference: input === copy };
 }

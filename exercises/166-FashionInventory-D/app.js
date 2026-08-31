@@ -1,6 +1,27 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function getLaceNameDataForShoes(inventory) {
-    // your code here
-    return '';
+    const result = [];
+    for (let i = 0; i < inventory.length; i++) {
+        const designer = inventory[i];
+        for (let j = 0; j < designer.shoes.length; j++) {
+            const shoe = designer.shoes[j];
+            const lowerName = shoe.name.toLowerCase();
+            if (lowerName.includes('lace')) {
+                const nameWords = shoe.name.split(' ');
+                let targetWordIndex = -1;
+                for (let k = 0; k < nameWords.length; k++) {
+                    if (nameWords[k].toLowerCase().includes('lace')) {
+                        targetWordIndex = k;
+                        break;
+                    }
+                }
+                result.push({
+                    nameWords: nameWords,
+                    targetWordIndex: targetWordIndex
+                });
+            }
+        }
+    }
+    return result;
 }

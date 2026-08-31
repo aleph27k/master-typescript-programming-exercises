@@ -5,5 +5,5 @@ function getSmallestElementAtProperty(obj, key) {
     if (!Array.isArray(arr) || arr.length === 0) {
         return [];
     }
-    return Math.min(...arr.map(element => Number(element) || 0));
+    return Math.min(...arr);
 }
